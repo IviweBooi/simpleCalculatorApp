@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    /* ======= colors ======= */
+    --primary-color: rgba(255, 165, 0, 1);         /* Orange */
+    --secondary-color: rgba(192, 192, 192, 1);     /* Silver */
+    --text-color: rgba(255, 255, 255, 1);          /* White */
+    --base-color: rgba(255, 255, 255, 1);              /* Pure white */
+    --screen-color: rgba(236, 240, 241, 1);        /* Light Gray */
+    --CTA-color: rgba(52, 152, 219, 1);             /* Blue */
+    --primary-hover-color: rgba(255, 140, 0, 1);    /* Darker Orange */
+    --secondary-hover-color: rgba(169, 169, 169, 1); /* Darker Silver */
+    --screen-text-color: rgba(44, 62, 80, 1);       /* Dark Blue */
+    --CTA-hover-color: rgba(41, 128, 185, 1);      /* Darker Blue */
+    --frame-color: rgba(50,50,50,1);
+    /* ======= font style ======= */
+    --font: 'inter', sans-serif;
+
+    /* ======= font size ======= */
+    --regular: 16px;
+    --large: 60px;
+
+    /* ======= button size ======= */
+
+}
+
+body{
+    background-color: var(--base-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#calc-frame{
+    height: 600px;
+    width: 400px;
+    background-color: var(--frame-color);
+    border: none;
+    border-radius: 50px;
+    flex: 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+/* ==================== screen =================== */
+#screen{
+    background-color: var(--screen-color);
+    flex: 1;
+    width: 95%;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    padding: 0 20px;
+}
+#screen h1{
+    color: var(--screen-text-color);
+    font-family: var(--font);
+    font-size: var(--large);
+    margin: 0;
+}
+
+/* ==================== buttons =================== */
+#buttons{
+    background-color: blue;
+    flex: 4;
+    width: 95%;
+    border: none;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+
+
+
