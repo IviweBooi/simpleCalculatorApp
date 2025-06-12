@@ -4,22 +4,22 @@
 
 :root {
     /* ======= colors ======= */
-    --primary-color: rgba(255, 165, 0, 1);         /* Orange */
+    --primary-color: rgba(255, 140, 0, 1);         /* Orange */
     --secondary-color: rgba(192, 192, 192, 1);     /* Silver */
     --text-color: rgba(255, 255, 255, 1);          /* White */
     --base-color: rgba(255, 255, 255, 1);              /* Pure white */
     --screen-color: rgba(236, 240, 241, 1);        /* Light Gray */
-    --CTA-color: rgba(52, 152, 219, 1);             /* Blue */
-    --primary-hover-color: rgba(255, 140, 0, 1);    /* Darker Orange */
+    --CTA-color: rgba(52, 130, 230, 1);             /* Blue */
+    --primary-hover-color: rgba(240, 110, 0, 1);    /* Darker Orange */
     --secondary-hover-color: rgba(169, 169, 169, 1); /* Darker Silver */
     --screen-text-color: rgba(44, 62, 80, 1);       /* Dark Blue */
-    --CTA-hover-color: rgba(41, 128, 185, 1);      /* Darker Blue */
+    --CTA-hover-color: rgba(41, 128, 200, 1);      /* Darker Blue */
     --frame-color: rgba(50,50,50,1);
     /* ======= font style ======= */
     --font: 'inter', sans-serif;
 
     /* ======= font size ======= */
-    --regular: 16px;
+    --regular: 20px;
     --large: 60px;
 
     /* ======= button size ======= */
@@ -40,7 +40,7 @@ body{
     width: 400px;
     background-color: var(--frame-color);
     border: none;
-    border-radius: 50px;
+    border-radius: 40px;
     flex: 1;
     display: flex;
     position: relative;
@@ -49,12 +49,14 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    box-shadow: 3px 3px 4px 1px; rgba(0,0,0,0.4);
+
 }
 /* ==================== screen =================== */
 #screen{
     background-color: var(--screen-color);
     flex: 1;
-    width: 95%;
+    width: 99%;
     margin-bottom: 20px;
     border: none;
     border-radius: 20px;
@@ -63,6 +65,8 @@ body{
     justify-content: start;
     align-items: center;
     padding: 0 20px;
+    box-shadow: 3px 3px 4px 1px rgba(0,0,0,0.45) inset;
+
 }
 #screen h1{
     color: var(--screen-text-color);
@@ -73,14 +77,50 @@ body{
 
 /* ==================== buttons =================== */
 #buttons{
-    background-color: blue;
+    background-color: transparent;;
     flex: 4;
-    width: 95%;
+    width: 99%;
     border: none;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+}
+#buttons button{
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    font-family: var(--font);
+    font-size: var(--regular);
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+    transition: all ease-in-out 0.3s;
+}
+#buttons button:hover{
+    transform: scale(1.03);
+}
+
+.primary-btn{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+.primary-btn:hover{
+    background-color: var(--primary-hover-color);
+}
+
+.secondary-btn{
+    background-color: var(--secondary-color);
+    color: var(--frame-color);
+}
+.secondary-btn:hover{
+    background-color: var(--secondary-hover-color);
+}
+
+.CTA-btn{
+    background-color: var(--CTA-color);
+    color: var(--text-color);
+}
+.CTA-btn:hover{
+    background-color: var(--CTA-hover-color);
 }
 
 
