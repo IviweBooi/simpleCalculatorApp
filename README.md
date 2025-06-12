@@ -9,17 +9,18 @@
   - User-Friendly Interface: Easy to navigate and use.
 
 ## Technologies Used
-  HTML: For the structure of the app.
-  CSS: For styling and layout.
-  JavaScript: For functionality and calculations.
-  Getting Started
+  - HTML: For the structure of the app.
+  - CSS: For styling and layout.
+  - JavaScript: For functionality and calculations.
+    
+## Getting Started
 
-## To run the app locally, follow these steps:
+### To run the app locally, follow these steps:
 
-> Clone the repository:
-1. git clone https://github.com/yourusername/simple-calculator.git
-2. Navigate to the project directory:
-    - cd simpleCalculatorApp
+1. Clone the repository:
+  - git clone https://github.com/yourusername/simple-calculator.git
+2 Navigate to the project directory:
+  - cd simpleCalculatorApp
 3. Open index.html in your web browser.
    
 ## Usage
