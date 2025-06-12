@@ -7,33 +7,36 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="icon" type="image/png" href="images/calc-icon.png"/>
 </head>
-<body>
+<body >
     <div id="calc-frame">
-        <div id="screen">
-            <h1>0</h1>
-        </div>
+        <button onclick="activateThemeChange()" id="theme-btn">
+            <img src="images/icons/theme-icon.png" >
+        </button>
+        <input id="screen" value="0" type="text" disabled>
+
         <div id="buttons">
-            <button class="secondary-btn" onclick="" id="7">7</button>
-            <button class="secondary-btn" onclick="" id="8">8</button>
-            <button class="secondary-btn" onclick="" id="9">9</button>
-            <button class="primary-btn" onclick="" id="+">+</button>
-            <button class="secondary-btn" onclick="" id="4">4</button>
-            <button class="secondary-btn" onclick="" id="5">5</button>
-            <button class="secondary-btn" onclick="" id="6">6</button>
-            <button class="primary-btn" onclick="" id="-">-</button>
-            <button class="secondary-btn" onclick="" id="1">1</button>
-            <button class="secondary-btn" onclick="" id="2">2</button>
-            <button class="secondary-btn" onclick="" id="3">3</button>
-            <button class="primary-btn" onclick="" id="x">x</button>
-            <button class="secondary-btn" onclick="" id="0">0</button>
-            <button class="CTA-btn" onclick="" id="del">DEL</button>
-            <button class="CTA-btn"onclick="" id="ac">AC</button>
-            <button class="primary-btn" onclick="" id="/">/</button>
-            <button class="secondary-btn" onclick="" id=".">.</button>
-            <button class="primary-btn" onclick="" id="=" style="grid-column: span 3;">=</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('7')" id="7">7</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('8')" id="8">8</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('9')" id="9">9</button>
+            <button class="primary-btn" onclick="arithmeticOperatorBtnClicked('+')" id="+">+</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('4')" id="4">4</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('5')" id="5">5</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('6')" id="6">6</button>
+            <button class="primary-btn" onclick="arithmeticOperatorBtnClicked('-')" id="-">-</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('1')" id="1">1</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('2')" id="2">2</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('3')" id="3">3</button>
+            <button class="primary-btn" onclick="arithmeticOperatorBtnClicked('*')" id="x">x</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('0')" id="0">0</button>
+            <button class="CTA-btn" onclick="delBtnClicked()" id="del">DEL</button>
+            <button class="CTA-btn"onclick="acBtnClicked()" id="ac">AC</button>
+            <button class="primary-btn" onclick="arithmeticOperatorBtnClicked('/')" id="/">/</button>
+            <button class="secondary-btn" onclick="secondaryBtnClicked('.')" id=".">.</button>
+            <button class="primary-btn" onclick="equalBtnClicked()" id="=" style="grid-column: span 3;">=</button>
 
         </div>
     </div>
     <script src="functionality.js"></script>
+    <script src="darkMode.js"></script>
 </body>
 </html>

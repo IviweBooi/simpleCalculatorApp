@@ -22,10 +22,30 @@
     --regular: 20px;
     --large: 60px;
 
-    /* ======= button size ======= */
+
 
 }
 
+.darkmode {
+    --primary-color: rgba(255, 140, 0, 1);         /* Bright Orange */
+    --secondary-color: rgba(169, 169, 169, 1);     /* Light Gray */
+    --text-color: rgba(255, 255, 255, 1);          /* White */
+    --base-color: rgba(30, 30, 30, 1);              /* Dark Gray */
+    --screen-color: rgba(50, 50, 50, 1);            /* Darker Gray */
+    --CTA-color: rgba(52, 130, 230, 1);             /* Bright Blue */
+    --primary-hover-color: rgba(240, 110, 0, 1);    /* Darker Orange */
+    --secondary-hover-color: rgba(192, 192, 192, 1); /* Light Silver */
+    --screen-text-color: rgba(255, 255, 255, 1);    /* White */
+    --CTA-hover-color: rgba(41, 128, 200, 1);       /* Darker Blue */
+    --frame-color: rgba(70, 70, 70, 1);              /* Medium Gray */
+
+    /* ======= font style ======= */
+    --font: 'inter', sans-serif;
+
+    /* ======= font size ======= */
+    --regular: 20px;
+    --large: 60px;
+}
 body{
     background-color: var(--base-color);
     display: flex;
@@ -36,7 +56,7 @@ body{
 }
 
 #calc-frame{
-    height: 600px;
+    height: 100vh;
     width: 400px;
     background-color: var(--frame-color);
     border: none;
@@ -53,8 +73,39 @@ body{
 
 }
 /* ==================== screen =================== */
+#theme-btn{
+    flex: 0.35;
+    background-color: white;
+    width: 40px;
+    margin-bottom: 20px;
+    align-self: end;
+    margin-right: 20px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.9),1px 1px 4px 1px rgba(0,0,0,0.5) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+#theme-btn:hover{
+    transform: scale(1.1);
+}
+
+#theme-btn img{
+    object-fit: contain;
+    position: relative;
+    width: 20px;
+    length: 20px;
+}
 #screen{
     background-color: var(--screen-color);
+    color: var(--screen-text-color);
+    font-family: var(--font);
+    font-size: var(--large);
     flex: 1;
     width: 99%;
     margin-bottom: 20px;
@@ -77,7 +128,7 @@ body{
 
 /* ==================== buttons =================== */
 #buttons{
-    background-color: transparent;;
+    background-color: transparent;
     flex: 4;
     width: 99%;
     border: none;
@@ -92,12 +143,25 @@ body{
     border-radius: 20px;
     font-family: var(--font);
     font-size: var(--regular);
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.9),1px 1px 4px 1px rgba(0,0,0,0.5) inset;
     transition: all ease-in-out 0.3s;
+    cursor: pointer;
 }
 #buttons button:hover{
     transform: scale(1.03);
 }
+#buttons button:active{
+    animation-name: animate;
+    animation-duration: 5s;
+    transition: all ease-in-out 0.3s;
+}
+@keyframes animate{
+    0%{transform: scale(1);}
+    25%{transform: scale(1.01);}
+    75%{transform: scale(1.02);}
+    100%{transform: scale(1.03);}
+}
+
 
 .primary-btn{
     background-color: var(--primary-color);
