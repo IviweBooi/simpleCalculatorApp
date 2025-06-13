@@ -18,8 +18,7 @@
 ### To run the app locally, follow these steps:
 
 1. Clone the repository:
-  - git clone https://github.com/yourusername/simple-calculator.git
-    
+  - git clone https://github.com/IviweBooi/simpleCalculatorApp.git
 2 Navigate to the project directory:
   - cd simpleCalculatorApp
     
